@@ -15,18 +15,7 @@ const Item: React.FC = () => {
         <div className="examples__slide-item">
             <img src={example} alt="" className="" />
             <div className="examples__slide-item-text">
-                <h2 className='item-h2'>REVO Morning</h2>
-                <p className='item-p'>đắng, hậu ngọt, hương hoa</p>
-                <div className='item-ratio'>
-                    <p>MUA NGAY</p>
-                    <p>CHI TIẾT</p>
-                </div>
-            </div>
-        </div>
-        <div className="examples__slide-item">
-            <img src={example} alt="" className="" />
-            <div className="examples__slide-item-text">
-                <h2 className='item-h2'>REVO Morning</h2>
+                <h2 className='examples__slide-item-h2'>REVO Morning</h2>
                 <p className='item-p'>đắng, hậu ngọt, hương hoa</p>
                 <div className='item-ratio'>
                     <p>MUA NGAY</p>
@@ -44,6 +33,11 @@ const Examples: React.FC = () => {
             <div className="wrapper">
                 <div className="examples-content">
                      <div className="examples-backg"></div>
+                    <div className="examples__title">
+                        <h2>Choose Your Favorite</h2>
+                        <h1>CHUẨN GU ĐÚNG VỊ</h1>
+                    </div>
+                     
                 
                 
                 <Swiper
@@ -51,7 +45,6 @@ const Examples: React.FC = () => {
                     spaceBetween={30}
                     slidesPerView={2}
                     navigation
-                    parallax={{enabled: true}}
                     >
 
                     <SwiperSlide>
@@ -69,8 +62,7 @@ const Examples: React.FC = () => {
                     <SwiperSlide>
                        <Item/>
                     </SwiperSlide>
-
-                </Swiper>
+                 </Swiper>
 
                  </div>
             </div>       

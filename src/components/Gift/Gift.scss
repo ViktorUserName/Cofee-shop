@@ -1,0 +1,89 @@
+.gift {
+    background: #EDF0F5;
+    &__title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        & h1 {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 900;
+            font-size: 30px;
+            line-height: 34px;
+            color: #415167;
+            padding-bottom: 70px;
+        }
+        & h2 {
+            font-family: 'Nunito';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 24px;
+            color: #415167;
+            padding-top: 70px;
+        }
+    }
+    &__slider-items {
+        display: flex;
+        justify-content: flex-end;
+    }
+    &__slider-item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        max-width: 800px;
+        background: white;
+        gap: 80px;
+        padding: 80px 60px 70px 0;
+        position: relative;
+        margin-bottom: 100px;
+        justify-content: flex-end;
+        &-text {
+            width: 70%;
+            // max-width: 430px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: flex-start;
+            & h1 {
+                font-family: 'Nunito';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 28px;  
+                color: #232C38;
+            }
+            & p {
+                font-family: 'Nunito';
+                font-style: normal;
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 22px;
+                color: #151D28;
+            }
+        }
+        &-describ {
+            display: flex;
+            flex-direction: row;
+            gap: 50px;
+            &-text {
+                display: flex;
+                flex-direction: row;
+                gap: 19px;
+            }
+        }
+        &__ratio {
+            display: flex;
+            flex-direction: row;
+            gap: 80px;
+            padding-top: 50px;
+        }
+    }
+}
+.gift__slider__main-img {
+    position: absolute;
+    width: 50%;
+    left: -220px;
+    top: 60px;
+}

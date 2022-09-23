@@ -1,5 +1,5 @@
 .examples {
-   
+    margin-bottom: 80px;
     .examples-backg {
         max-width: 384px;
         width: 100%;
@@ -8,6 +8,30 @@
         left: 0;
         height: 100%;
     }  
+    &__title{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        & h1 {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 900;
+            font-size: 30px;
+            line-height: 34px;
+            color: #415167;
+            padding-bottom: 70px;
+        }
+        & h2 {
+            font-family: 'Nunito';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 24px;
+            color: #415167;
+            padding-top: 70px;
+        }
+    }
     &__slide-group {
         display: flex;
         flex-direction: column;
@@ -19,6 +43,32 @@
         justify-content: space-between;
         background: #FFFFFF;
         align-items: center;
+        &-h2 {
+            &::before {
+                content: '99.000';
+                display: flex;
+                font-family: 'Nunito';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 24px;
+                color: #C7A17A;
+            }
+            font-family: 'Nunito';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 28px;
+            color: #232C38;
+        }
+        &-p {
+            font-family: 'Nunito';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 22px;
+            color: #151D28;
+        }
         &-text {
             max-width: 283px;
             display: flex;
@@ -29,32 +79,7 @@
         }
     }
 }
-.item-h2 {
-    &::before {
-        content: '99.000';
-        display: flex;
-        font-family: 'Nunito';
-        font-style: normal;
-        font-weight: 600;
-        font-size: 20px;
-        line-height: 24px;
-        color: #C7A17A;
-    }
-    font-family: 'Nunito';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 28px;
-    color: #232C38;
-}
-.item-p {
-    font-family: 'Nunito';
-    font-style: normal;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 22px;
-    color: #151D28;
-}
+
 .item-ratio {
     display: flex;
     gap: 44px;
