@@ -1,12 +1,13 @@
 import React from 'react';
 import './Examples.scss';
 import "./slider.scss"
-import { Navigation, Pagination, Parallax } from 'swiper';
+import { Navigation, Pagination, Grid } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/scss';
 import 'swiper/scss/navigation';
 import 'swiper/scss/pagination';
-import 'swiper/scss/parallax';
+import "swiper/scss/grid";
+// import 'swiper/scss/parallax';
 import example from '../../img/example.png'
 
 const Item: React.FC = () => {
@@ -30,36 +31,49 @@ const Item: React.FC = () => {
 const Examples: React.FC = () => {
     return (
         <section className='examples'>
-            <div className="wrapper">
-                <div className="examples-content">
                      <div className="examples-backg"></div>
+            {/* <div className="wrapper"> */}
+                <div className="examples-content">
                     <div className="examples__title">
                         <h2>Choose Your Favorite</h2>
                         <h1>CHUẨN GU ĐÚNG VỊ</h1>
                     </div>
-                     
-                
-                
-                <Swiper
-                    modules={[Navigation, Pagination]}
+                      
+            <div className='examples__padd-slid'>
+                <Swiper className='mySlider1'
+                    modules={[Navigation, Grid]}
                     spaceBetween={30}
-                    slidesPerView={2}
+                    slidesPerView={2.2}
+                    // centeredSlides={false}
+                    // slidesPerGroup={2}
+                    // grid={{
+                    //     rows: 2,
+                    //   }}
                     navigation
                     >
 
                     <SwiperSlide>
+                        <Item/>
+                        <Item/>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                       <Item/>
                        <Item/>
                     </SwiperSlide>
                     <SwiperSlide>
                        <Item/>
-                    </SwiperSlide>
-                    <SwiperSlide>
                        <Item/>
                     </SwiperSlide>
                     <SwiperSlide>
                        <Item/>
+                       <Item/>
                     </SwiperSlide>
                     <SwiperSlide>
+                       <Item/>
+                       <Item/>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                       <Item/>
                        <Item/>
                     </SwiperSlide>
                  </Swiper>
