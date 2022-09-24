@@ -13,11 +13,11 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    {/* <Header/>
-    <Machine/> */}
+    <Header/>
+    <Machine/>
     <Examples/>
     <Gift/>
-    {/* <Personal/>
-    <Footer/> */}
+    <Personal/>
+    <Footer/>
   </React.StrictMode>
 );
