@@ -1,7 +1,7 @@
 import React from 'react';
 import './Examples.scss';
 import "./slider.scss"
-import { Navigation, Pagination, Grid } from 'swiper';
+import { Navigation, Pagination, } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/scss';
 import 'swiper/scss/navigation';
@@ -41,15 +41,21 @@ const Examples: React.FC = () => {
                       
             <div className='examples__padd-slid'>
                 <Swiper className='mySlider1'
-                    modules={[Navigation, Grid]}
+                    modules={[Navigation]}
                     spaceBetween={30}
-                    slidesPerView={2.2}
-                    // centeredSlides={false}
-                    // slidesPerGroup={2}
-                    // grid={{
-                    //     rows: 2,
-                    //   }}
+                    slidesPerView={1}
                     navigation
+                    breakpoints={ {
+                        850: {
+                            slidesPerView: 2.2,
+                        },
+                        500: {
+                            slidesPerView: 1.2
+                        }
+                    }}
+
+
+                    
                     >
 
                     <SwiperSlide>

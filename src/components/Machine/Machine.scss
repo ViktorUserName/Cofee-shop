@@ -59,3 +59,43 @@
         }
     }
 }
+
+@media (max-width: 1110px){
+    .machine {
+        &__cart {
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+        &-item {
+            & h2 {
+                font-size: 20px;
+            }
+            & p {
+                font-size: 14px;
+            }
+        }
+    }   
+    }
+}
+@media (max-width: 480px){
+    .machine {
+        &__text {
+            & h2 {
+                font-size: 16px;
+            }
+            & h1 {
+                font-size: 20px;
+            }
+        }
+        &__cart-item {
+            padding-top: 30px;
+            & h2 {
+                font-size: 16px;
+                padding: 20px 0;
+            }
+            & p {
+                font-size: 14px;
+            }
+        }
+    }
+}
