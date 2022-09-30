@@ -14,10 +14,10 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <Header/>
-    <Machine/>
+    {/* <Machine/>
     <Examples/>
     <Gift/>
     <Personal/>
-    <Footer/>
+    <Footer/> */}
   </React.StrictMode>
 );

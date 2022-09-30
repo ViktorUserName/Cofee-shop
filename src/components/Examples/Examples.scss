@@ -1,13 +1,13 @@
 .examples {
     position: relative;
-    .examples-backg {
-        max-width: 384px;
+    &::after {
         width: 30%;
-        background: #415167;
-        position: absolute;
-        left: 0;
+        content: '';
         height: 100%;
-    }  
+        background: #415167;
+        top: 0;
+        position: absolute;
+    }
     &__title{
         display: flex;
         flex-direction: column;
