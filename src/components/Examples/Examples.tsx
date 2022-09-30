@@ -31,8 +31,6 @@ const Item: React.FC = () => {
 const Examples: React.FC = () => {
     return (
         <section className='examples'>
-                     {/* <div className="examples-backg"></div> */}
-            {/* <div className="wrapper"> */}
                 <div className="examples-content">
                     <div className="examples__title">
                         <h2>Choose Your Favorite</h2>
@@ -85,6 +83,7 @@ const Examples: React.FC = () => {
                  </Swiper>
 
                  </div>
+                 
             </div>       
         </section>
     );

@@ -16,8 +16,8 @@ root.render(
     <Header/>
     <Machine/>
     <Examples/>
-    {/* <Gift/>
-    <Personal/> */}
+    <Gift/>
+    <Personal/>
     <Footer/>
   </React.StrictMode>
 );

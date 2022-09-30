@@ -17,7 +17,8 @@ const Item: React.FC = () => {
                     <img src={gift} alt="" className='gift__slider__main-img'/>
                     <div className="gift__slider-item-text">
                         <h1>Giftset "Cà phê phin Việt Nam"</h1>
-                        <p>Món quà tuyệt vời dành cho người sành cà phê. Hạt cà phê được Revo cẩn trọng chọn lựa, rang xay theo công nghệ và bí quyết học hỏi từ những nghệ nhân nổi tiếng, cùng với tình yêu, sự đam mê của người làm cà phê… tạo ra những tách cà phê tinh khiết chỉ dành riêng cho bạn.</p>
+                        <p className='gift__text-wrapp-no'>Món quà tuyệt vời dành cho người sành cà phê. Hạt cà phê được Revo cẩn trọng chọn lựa, rang xay theo công nghệ và bí quyết học hỏi từ những nghệ nhân nổi tiếng, cùng với tình yêu, sự đam mê của người làm cà phê… tạo ra những tách cà phê tinh khiết chỉ dành riêng cho bạn.</p>
+                        <p className='gift__text-wrapp'>Món quà tuyệt vời dành cho người sành cà phê. Hạt cà phê được Revo cẩn trọng chọn lựa, rang xay theo công ...</p>
                         <div className="gift__slider-item-describ">
                             <div className="gift__slider-item-describ-text">
                             <img src={beans} alt="" />
@@ -44,10 +45,12 @@ const Item: React.FC = () => {
     )
 }
 
+    
 const Gift: React.FC = () => {
     return (
         <section className='gift'>
             <div className="wrapper">
+            
             <div className="gift-content">
                 <div className="gift__title">
                     <h2>Best Gift For Best Friend</h2>
@@ -55,11 +58,16 @@ const Gift: React.FC = () => {
                 </div>
                 
                  
-                 <Swiper
-                    modules={[Navigation, Pagination]}
-                    
-                   
-                    navigation
+                 <Swiper className='gift-swiper'
+                    direction={"vertical"}
+                    pagination={
+                        {clickable: true,
+                        renderBullet: function (index, className) {
+                                return '<span class="' + className + '">' + (index + 1) + "</span>";
+                              },
+                        }
+                    }
+                    modules={[Pagination]}
                     >
                     <SwiperSlide><Item/></SwiperSlide>
                     <SwiperSlide><Item/></SwiperSlide>
@@ -67,6 +75,7 @@ const Gift: React.FC = () => {
                 </Swiper>
             </div>
             </div>
+        
             
         </section>
     );

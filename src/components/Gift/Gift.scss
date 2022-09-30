@@ -1,5 +1,19 @@
 .gift {
+    position: relative;
+    padding-bottom: 80px;
+    &::after{
+    content: '';
     background: #EDF0F5;
+    width: 67%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    }
+    &__text-wrapp {
+        display: none;
+    }
     &__title {
         display: flex;
         flex-direction: column;
@@ -71,6 +85,7 @@
                 display: flex;
                 flex-direction: row;
                 gap: 19px;
+                align-items: center;
             }
         }
         &__ratio {
@@ -86,4 +101,85 @@
     width: 50%;
     left: -220px;
     top: 60px;
+}
+.gift-swiper {
+    max-height: 431px;
+}
+.swiper-pagination {
+    height: 100%;
+}
+.swiper-vertical > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-vertical.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 !important;
+}
+
+.swiper-vertical > .swiper-pagination-bullets, .swiper-pagination-vertical.swiper-pagination-bullets {
+    right: 0 !important;
+}
+
+.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-vertical{
+    & span {
+        font-size: 25px;
+        width: 50px;
+        height: 33%;
+        border-radius: 0;
+        color: red;
+        background: white;
+        // border: #000 solid 1px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2) inset;
+    }
+}
+.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-vertical-active {
+    background: black;
+}
+
+@media (max-width: 1050px) {
+    .gift__slider {
+        &-item {
+            // padding: 20px;
+            gap: 20px;
+            &__ratio {
+                padding-top: 10px;
+            }
+            &-text {
+                overflow-wrap: break-word;
+            }
+        }
+        &-items {
+            justify-content: center;
+        }
+        &__main-img {
+            max-width: 50%;
+            position: static;
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .gift {
+        &__slider-item{
+            flex-direction: column;
+        }
+        &__slider-item__ratio {
+            gap: 10px;
+        }
+        &__text-wrapp {
+            display: inline;
+            padding-right: 25px;
+            &-no {
+                display: none;
+            }
+        }
+    }
+    .gift-swiper {
+        max-height: 640px;
+    }
+    .gift__slider-item-describ {
+        gap: 15px;
+        &-text {
+            gap:10px;
+        }
+    }
 }
