@@ -1,4 +1,18 @@
 .personal {
+    position: relative;
+    &::after {
+        z-index: -2;
+        content: '';
+        background: #415167;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 33%;
+        height: 100%;
+        @media (max-width: 1090px){
+            content: none;
+        }
+    }
     &-content {
         display: flex;
         flex-direction: column;
