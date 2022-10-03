@@ -1,10 +1,11 @@
 import React from 'react';
 import './Personal.scss';
-import { Navigation, Pagination, Parallax } from 'swiper';
+import { Navigation, Pagination, EffectCube } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/scss';
 import 'swiper/scss/navigation';
 import 'swiper/scss/pagination';
+import "swiper/css/effect-cube";
 import img from '../../img/personal-img.png'
 
 
@@ -34,19 +35,27 @@ const Personal: React.FC = () => {
                         <h1>COMBO PHIN PHÊ</h1>
                     </div>
                     <div className="wrapper">
-                    <Swiper className='mySwiper'
-                        modules={[Navigation, Pagination]}
-                        spaceBetween={10}
-                        slidesPerView={3}
-                       navigation>
+                    <Swiper className='mySwiper3'
+                                effect={"cube"}
+                                grabCursor={true}
+                                cubeEffect={{
+                                  shadow: true,
+                                  slideShadows: true,
+                                  shadowOffset: 80,
+                                  shadowScale: 0.80,
+                                }}
+                                pagination={true}
+                                modules={[EffectCube, Pagination]}
+                        >
 
-                        <SwiperSlide><Item/></SwiperSlide>
-                        <SwiperSlide><Item/></SwiperSlide>
-                        <SwiperSlide><Item/></SwiperSlide>
-                        <SwiperSlide><Item/></SwiperSlide>
-                        <SwiperSlide><Item/></SwiperSlide>
-                        <SwiperSlide><Item/></SwiperSlide>
-                        <SwiperSlide><Item/></SwiperSlide>
+                            <SwiperSlide><Item/></SwiperSlide>
+                            <SwiperSlide><Item/></SwiperSlide>
+                            <SwiperSlide><Item/></SwiperSlide>
+                            <SwiperSlide><Item/></SwiperSlide>
+                            <SwiperSlide><Item/></SwiperSlide>
+                            <SwiperSlide><Item/></SwiperSlide>
+                            <SwiperSlide><Item/></SwiperSlide>
+                    
                     </Swiper>
                     </div>
                 </div>

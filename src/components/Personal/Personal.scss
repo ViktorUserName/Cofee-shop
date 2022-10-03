@@ -97,6 +97,36 @@
         }
     }
 }
-.mySwiper {
-    padding: 10px 0;
+.mySwiper3 {
+    & > .swiper-wrapper {
+        max-width: 360px;
+    }
+    & > .swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
+        bottom:  - 50px;
+    }
+}
+
+@media (max-width: 425px) {
+    .mySwiper3 {
+        & > .swiper-wrapper {
+            max-width: 270px !important;
+        }
+        & img {
+            max-width: 100%;
+            width: auto;
+            height: auto;
+        }
+    }
+    .personal__item-info{
+        padding:  10px;
+        & h1 {
+            font-size: 20px;
+        }
+        & p {
+            font-size: 13px;
+        }
+    }
+    .personal__item-info__togle {
+        justify-content: space-around;
+    }
 }
