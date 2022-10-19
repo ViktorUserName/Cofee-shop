@@ -31,7 +31,9 @@ const Header: React.FC = () => {
                         <div className="header__nav-dot">2</div>
                     </div>
                     <div className="header__nav-span">
-                        <span>burger</span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
                     </div>
                     <ul className="header__nav-ul">
                         <li>TRANG CHỦ</li>
