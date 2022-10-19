@@ -75,6 +75,10 @@
                 font-size: 16px;
                 line-height: 22px;
                 color: #151D28;
+                @media(min-width: 380px) {
+                    font-size: 12px;
+                    line-height: 20px;
+                }
             }
         }
         &-describ {
@@ -86,6 +90,10 @@
                 flex-direction: row;
                 gap: 19px;
                 align-items: center;
+                @media(min-width: 380px) {
+                    font-size: 12px;
+                    line-height: 20px;
+                }
             }
         }
         &__ratio {
@@ -182,6 +190,10 @@
         gap: 15px;
         &-text {
             gap:10px;
+            & > div > p {
+            font-size: 12px;
+            line-height: 20px;
+            }
         }
     }
 }
